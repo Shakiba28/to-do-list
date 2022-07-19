@@ -6,7 +6,7 @@ function get_todos() {
     }
     return todos;
 }
-//add task 
+
 function add() {
     var task = document.getElementById('task').value;
     if (task === "") {
@@ -23,7 +23,7 @@ function add() {
     }
 
 }
-//remove task
+
 function remove() {
     var id = this.getAttribute('id');
     var todos = get_todos();
@@ -36,12 +36,17 @@ function remove() {
     return false;
 }
 
+
+function done() {
+
+}
+
 function show() {
     var todos = get_todos();
 
     var html = '<ul class="bg-warning list-unstyled ">';
     for (var i = 0; i < todos.length; i++) {
-        html += '<li class="list">' + todos[i] + '<i class="bi bi-trash-fill remove" id="' + i + '"></i></li>';
+        html += '<li class="list">' + todos[i] + '<div > <i class="bi bi-check-lg done"></i> <i class="bi bi-pencil-fill edit"></i> <i class="bi bi-trash-fill remove" id="' + i + '"></i></div></li>';
     };
     html += '</ul>';
 
@@ -50,9 +55,8 @@ function show() {
     var buttons = document.getElementsByClassName('remove');
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', remove);
-        
     };
 }
-
 document.getElementById('add').addEventListener('click', add);
 show();
+

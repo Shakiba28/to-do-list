@@ -1,49 +1,16 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <style>
-.container {
-    width: 55%;
-    border: 1px solid #d7d7d7;
-    border-radius: .5rem;
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: #fffffffc;
-}
-
-body {
-    background-color: #1f4167;
-}
-.form-control:focus {
-    border-color: #ffc107;
-    box-shadow: 0 0 0 1px #ffc107;
-}
-
-.btn:focus {
-    box-shadow: none;
-}
-
-.remove {
-    cursor: pointer;
-}
-
-.list {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    font-size: 1rem;
-}
-ul {
-    border-radius: .5rem;
-}
-    </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -52,15 +19,17 @@ ul {
         </div>
         <div class="d-flex justify-content-between">
             <input id="task" class="form-control form-control-lg w-75">
-            <button class="btn btn-warning" id="add">Add Task +</button>
+            <button class="btn btn-warning" id="add">Add Task</button>
         </div>
-        
+
         <hr>
         <div id="todos"></div>
         <img src="vecteezy_to-do-list-concept-illustration_7059682.jpg" class="w-100 mt-5" alt="">
     </div>
-   
- 
-<script src="todo.js"></script>
+
+
+    <script src="todo.js">
+    </script>
 </body>
+
 </html>
