@@ -46,7 +46,7 @@ function show() {
 
     var html = '<ul class="bg-warning list-unstyled ">';
     for (var i = 0; i < todos.length; i++) {
-        html += '<li class="list">' + todos[i] + '<div > <i class="bi bi-check-lg done"></i> <i class="bi bi-pencil-fill edit"></i> <i class="bi bi-trash-fill remove" id="' + i + '"></i></div></li>';
+        html += '<li class="list">' + todos[i] + '<div > <i class="bi bi-check-lg done"></i><i class="bi bi-trash-fill remove" id="' + i + '"></i></div></li>';
     };
     html += '</ul>';
 
