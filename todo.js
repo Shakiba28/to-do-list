@@ -7,6 +7,8 @@ function get_todos() {
     return todos;
 }
 
+//Add the task to the array
+
 function add() {
     var task = document.getElementById('task').value;
     if (task === "") {
@@ -14,7 +16,7 @@ function add() {
     } else {
         var todos = get_todos();
         todos.push(task);
-        alert("Added task ✔");
+        alert("Added task !");
         localStorage.setItem('todo', JSON.stringify(todos));
 
         show();
@@ -35,18 +37,24 @@ function remove() {
 
     return false;
 }
-
-
-function done() {
-
+window.onload = function () {
+    checked();
+};
+function checked() {
+    let list = document.querySelector('ul');
+    list.addEventListener('click', function (ev) {
+        if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');   
+        }
+    }, false);
 }
 
 function show() {
     var todos = get_todos();
 
-    var html = '<ul class="bg-warning list-unstyled ">';
+    var html = '<ul class="bg-warning list-unstyled" id="ulist">';
     for (var i = 0; i < todos.length; i++) {
-        html += '<li class="list">' + todos[i] + '<div > <i class="bi bi-check-lg done"></i><i class="bi bi-trash-fill remove" id="' + i + '"></i></div></li>';
+        html += '<div class="d-flex justify-content-between align-items-center mx-2"><li class="list">' + todos[i] + '</li><i class="bi bi-trash-fill remove" id="' + i + '"></i></div>';
     };
     html += '</ul>';
 
@@ -59,4 +67,3 @@ function show() {
 }
 document.getElementById('add').addEventListener('click', add);
 show();
-

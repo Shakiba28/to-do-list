@@ -27,9 +27,7 @@
         font-size: .75rem;
     }
 
-    .remove,
-    .edit,
-    .done {
+    .remove{
         margin: 0 !important;
     }
 }
@@ -47,16 +45,11 @@ body {
     box-shadow: none;
 }
 
-.remove,
-.edit,
-.done {
+.remove{
     cursor: pointer;
     margin: 0 3px;
 }
 
-.done {
-    font-size: 20px;
-}
 
 .list {
     display: flex;
@@ -67,4 +60,9 @@ body {
 
 ul {
     border-radius: .5rem;
+}
+ 
+.checked{
+    text-decoration: line-through;
+    color: #5a5a5ade;
 }
