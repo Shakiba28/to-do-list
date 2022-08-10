@@ -44,7 +44,7 @@ function checked() {
     let list = document.querySelector('ul');
     list.addEventListener('click', function (ev) {
         if (ev.target.tagName === 'LI') {
-            ev.target.classList.toggle('checked');   
+            ev.target.classList.toggle('checked');
         }
     }, false);
 }
@@ -66,4 +66,5 @@ function show() {
     };
 }
 document.getElementById('add').addEventListener('click', add);
+
 show();
